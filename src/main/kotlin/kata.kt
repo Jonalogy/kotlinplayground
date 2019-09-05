@@ -1,5 +1,5 @@
+import kotlinx.coroutines.yield
 import kotlin.math.abs
-import kotlin.math.ceil
 
 class Kata {
     // Return Negative https://www.codewars.com/kata/55685cd7ad70877c23000102
@@ -11,8 +11,15 @@ class Kata {
 
     // The PaperFold sequence https://www.codewars.com/kata/5d26721d48430e0016914faa
     fun paperFold(): Iterator<Int> {
-        return iterator {
+
+        return sequence {
             yield(1)
-        }
+        }.iterator()
+
+        /* example
+        sequence {
+            yieldAll(generateSequence(1) { it + 1 })
+        }.take(10).iterator()
+        */
     }
 }
