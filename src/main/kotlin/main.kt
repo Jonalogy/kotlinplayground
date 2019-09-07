@@ -1,6 +1,11 @@
 import codewars.Kyu7
+//import codewars.paperfold
 
 fun main() {
     println("TADA")
-    println(Kyu7.paperFold().next())
+
+    val gen = Kyu7.paperfold()
+    for (i in 1..20) {
+        println(gen.next())
+    }
 }

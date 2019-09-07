@@ -10,17 +10,17 @@ internal class Kyu7Test {
     @Nested
     inner class paperFold {
         @Test
-        fun `should return only 1s and 0s` () {
-            Kyu7.paperFold()
-                .forEach { assertEquals(it == 0 || it == 1, true) }
-        }
-
-        @Test
         fun twenty() {
-            val gen = Kyu7.paperFold()
+            val gen = Kyu7.paperfold()
             listOf(1,1,0,1,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,1).iterator().forEach {
                 assertEquals(it, gen.next())
             }
+        }
+
+        @Test
+        fun foo() {
+            val gen = Kyu7.paperfold()
+            gen.asSequence().take(1000000).toList()
         }
     }
 }
