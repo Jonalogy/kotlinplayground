@@ -2,10 +2,7 @@ import codewars.Kyu7
 //import codewars.paperfold
 
 fun main() {
-    println("TADA")
+    println("Running Main...")
 
-    val gen = Kyu7.paperfold()
-    for (i in 1..20) {
-        println(gen.next())
-    }
+    Kyu7.evenNumbers(listOf(1, 2, 3, 4, 5, 6, 7, 8, 9), 3)
 }

@@ -37,8 +37,9 @@ class PaperFoldAttempt {
     companion object {
         fun one() = One()
         fun two() = Two()
-        fun Three(): Iterator<Int> = sequence {
+        fun Three(): Iterator<Int> = iterator() {
+            // Need to know formula?
             yieldAll(generateSequence(1) { it + 1 })
-        }.iterator()
+        }
     }
 }
